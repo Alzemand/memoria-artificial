@@ -3,4 +3,5 @@ chatterbot_corpus
 SpeechRecognition
 gtts
 playsound
-pyaudio #sudo apt install python3-pyaudio
+pyaudio
+

@@ -10,6 +10,7 @@ def cria_audio(audio):
     print("Estou aprendendo o que você disse...")
     #Da play ao audio
     playsound('hello.mp3')
+    playsound('gravacao.wav')
 
 #Funcao responsavel por ouvir e reconhecer a fala
 def ouvir_microfone():
@@ -22,6 +23,8 @@ def ouvir_microfone():
         print("Diga alguma coisa: ")
         #Armazena a informacao de audio na variavel
         audio = microfone.listen(source)
+        with open('gravacao.wav', 'wb') as f:
+            f.write(audio.get_wav_data())
 
     try:
         #Passa o audio para o reconhecedor de padroes do speech_recognition
